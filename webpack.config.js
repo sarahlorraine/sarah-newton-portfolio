@@ -12,7 +12,10 @@ const CSSModuleLoader = {
 module.exports = {
   entry: {
     app: './src/index.tsx',
-    vendor: ['react', 'react-dom']
+    vendor: ['react', 'react-dom', 'react-router']
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   output: {
       path: path.resolve(__dirname, 'dist'),
