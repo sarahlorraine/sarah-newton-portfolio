@@ -1,0 +1,13 @@
+.headerWrapper {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    color: #fff;
+    
+    & h1 {
+        font-size: 28px;
+        line-height: 60px;
+        color: #FBF7F7;
+    }
+}

@@ -1,0 +1,76 @@
+@import '../../globals/base_variables.scss';
+
+body, html {
+    font-family: "AktivGroteskLight", "Arial";
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $background;
+}
+
+.layout {
+    min-height: 100%;
+    width: 100%;
+}
+
+.box {
+    font-family: "AktivGroteskLight", "Arial";
+    margin: 0 auto;
+    padding: 16px 36px;
+}
+
+h1 {
+    font-family: "AktivGroteskMedium", "Arial";
+    font-size: 28px;
+}
+
+h2 {
+    font-family: "AktivGrotesk", "Arial";
+    font-size: 26px;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: "AktivGroteskLight", "Arial";
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+    @media screen and(min-width: 768px) {
+        font-size: 18px;
+    }
+
+}
+
+strong {
+    font-family: "AktivGroteskMedium";
+    font-weight: 400;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+
+    &::before {
+        pointer-events: none;
+        content:"";
+        position: absolute;
+        width: 100%;
+        bottom: -6px;
+        height: 2px;
+        background-color: #000;
+        transition: bottom 0.05s cubic-bezier(0.25, 0.46, 0.45, 0.94), height 0.05s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    &:hover {
+        font-weight: 600;
+
+        &::before {
+            height: 1px;
+            bottom: -7px;
+        }
+    }
+  }

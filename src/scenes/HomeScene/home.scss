@@ -1,0 +1,41 @@
+@import "../../globals/base_variables";
+
+.intro {
+  @media screen and(min-width: 768px) {
+    max-width: 500px;
+  }
+  font-family: "AktivGroteskLight";
+  font-size: 28px;
+}
+
+.profile {
+  margin-top: 40px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 40%;
+    margin-left: auto;
+    padding-left: 26px;
+    margin-top: 26px;
+  }
+
+  img {
+    max-width: fit-content;
+    max-width: -webkit-fill-available;
+  }
+}
+
+
+.experience {
+  font-family: "AktivGroteskLight", "Arial";
+  margin-top: 70px;
+  font-size: 18px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+  }
+
+  & span {
+    display: block;
+    margin-bottom: 8px;
+  }
+}

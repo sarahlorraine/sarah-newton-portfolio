@@ -1,0 +1,23 @@
+@import '../../globals/base_variables.scss';
+
+.button {
+    font-family: "AktivGroteskRegular", "Arial";
+    display: block;
+    width: fit-content;
+    font-size: 16px;
+    border: solid 2px #000;
+    line-height: 40px;
+    padding: 4px 28px 0 28px;
+    background-color: transparent;
+    transition: background-color 0.15s;
+
+    &::before {
+        display: none;
+    }
+
+    &:hover {
+        background-color: #000;
+        color: $primary;
+        cursor: pointer;
+    }
+}
