@@ -18,7 +18,7 @@ module.exports = {
     historyApiFallback: true,
   },
   output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'build'),
       filename: 'js/[name].bundle.js'
   },
   devtool: 'source-map',
