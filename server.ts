@@ -7,7 +7,7 @@ const path = require("path"),
 app.listen(port, () => {
   console.log(`App is listening on port ${port}`);
 });
-app.get("/", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
 let compiler = webpack(webpackConfig);

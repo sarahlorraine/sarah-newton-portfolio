@@ -12,6 +12,7 @@ const TopBar = () => {
 
   const onBlur = (e: React.FocusEvent<HTMLInputElement>) => {
     e.preventDefault();
+    e.target.focus();
     if (mobileNavActive) setTimeout(() => setMobileNavActive(false), 100);
   };
 
@@ -26,8 +27,9 @@ const TopBar = () => {
         <Link to="/" className={"logo"}>
           arah Newton
         </Link>
-        <div onBlur={onBlur} className="navigationMobile">
+        <div className="navigationMobile">
           <button
+            onBlur={onBlur}
             className={mergeClassNames([
               mobileNavActive && "burgerBtnActive",
               "headerBurgerBtn",

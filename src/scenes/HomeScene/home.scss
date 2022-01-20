@@ -6,7 +6,6 @@
     font-size: 24px;
   }
   @media screen and(min-width: 1000px) {
-    max-width: 500px;
     font-size: 28px;
   }
   font-family: "AktivGroteskLight";
@@ -31,16 +30,18 @@
     margin-top: 26px;
     background-size: contain;
   }
+  @media screen and (min-width: 1000px) {
+    background-size: cover;
+  }
 }
-
 
 .experience {
   font-family: "AktivGroteskLight", "Arial";
-  margin-top: 70px;
+  margin-top: 80px;
   font-size: 18px;
 
   @media screen and (min-width: 768px) {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   & span {

@@ -1,26 +1,41 @@
-@import '../../globals/base_variables.scss';
+@import "../../globals/base_variables.scss";
 
 .main {
-    margin-top: 10%;
-    font-size: 22px;
-    max-width: 500px;
-    
-    p {
-        font-size: 20px;
-    }
+  margin-top: 10%;
+  font-size: 22px;
+  max-width: 500px;
+
+  p {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .image {
-    margin-top: 30px;
-    min-height: 400px;
-    background-position: left top;
-    background-size: cover;
-    background-image: url("../../../public/assets/images/kebnekaise.jpeg");
+  margin-top: 30px;
+  min-height: 400px;
+  background-position: left top;
+  background-size: cover;
+  background-image: url("../../../public/assets/images/kebnekaise.jpeg");
 
   @media screen and (min-width: 768px) {
     width: 40%;
     padding-left: 20px;
     max-height: 400px;
     margin-left: auto;
+  }
+}
+
+.portfolioBtn {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    width: fit-content;
+    font-size: 16px;
+    padding: 4px 28px 0 28px;
   }
 }
