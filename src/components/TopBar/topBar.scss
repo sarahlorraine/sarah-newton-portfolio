@@ -4,7 +4,7 @@
   min-height: 80px;
   line-height: 80px;
   position: relative;
-  background-color: $primary;
+  background-color: transparent;
   z-index: 10;
   transition: background-color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -25,16 +25,24 @@
 }
 
 .logo {
-  background-image: url("../../../public/assets/favicon.gif");
-  background-position: left 18px;
-  background-size: 40px;
-  background-repeat: no-repeat;
   display: block;
   padding-left: 43px;
   font-family: "AktivGroteskMedium", "Arial";
-  color: #000;
+  color: $font;
   font-size: 28px;
   text-align: left;
+
+  &::after {
+    content: "S";
+    line-height: 32px;
+    text-indent: 5px;
+    border: solid 3px $font;
+    position: absolute;
+    top: 20px;
+    left: 6px;
+    height: 28px;
+    width: 28px;
+  }
   &::before {
     display: none;
   }
@@ -53,7 +61,7 @@
 
   & a {
     margin: 0 14px;
-    color: #000;
+    color: $font;
     text-decoration: none;
     &::before {
       display: none;
@@ -105,7 +113,7 @@
         text-align: center;
 
         &:hover {
-          background-color: #000;
+          background-color: $font;
         }
       }
     }
@@ -142,7 +150,7 @@
 
 .topBun,
 .bottomBun {
-  background-color: #000;
+  background-color: $font;
   position: absolute;
   display: block;
   top: 0;

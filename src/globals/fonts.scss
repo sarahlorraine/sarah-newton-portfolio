@@ -1,31 +1,40 @@
-
 @font-face {
-    font-family: 'AktivGroteskMedium';
-    src: local('AktivGrotesk'), url(../../public/assets/fonts/aktivGrotesk/AktivGrotesk-Medium.otf) format('opentype');
-  }
-  
-@font-face {
-    font-family: 'AktivGroteskLight';
-    src: local('AktivGrotesk'), url(../../public/assets/fonts/aktivGrotesk/AktivGrotesk-Light.otf) format('opentype');
-    font-weight: 200;
-    font-style: normal;
+  font-family: "AktivGroteskMedium";
+  src: local("AktivGrotesk"),
+    url(../../public/assets/fonts/aktivGrotesk/AktivGrotesk-Medium.otf)
+      format("opentype");
 }
 
 @font-face {
-  font-family: 'AktivGroteskBlack';
-  src: local('AktivGrotesk'), url(../../public/assets/fonts/aktivGrotesk/AktivGrotesk-Black.otf) format('opentype');
+  font-family: "AktivGroteskLight";
+  src: local("AktivGrotesk"),
+    url(../../public/assets/fonts/aktivGrotesk/AktivGrotesk-Light.otf)
+      format("opentype");
+  font-weight: 200;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'AktivGroteskBold';
-  src: local('AktivGrotesk'), url(../../public/assets/fonts/aktivGrotesk/AktivGrotesk-Bold.otf) format('opentype');
+  font-family: "AktivGroteskBlack";
+  src: local("AktivGrotesk"),
+    url(../../public/assets/fonts/aktivGrotesk/AktivGrotesk-Black.otf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "AktivGroteskBold";
+  src: local("AktivGrotesk"),
+    url(../../public/assets/fonts/aktivGrotesk/AktivGrotesk-Bold.otf)
+      format("opentype");
   font-weight: 600;
-   font-style: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'AktivGroteskRegular';
-  src: local('AktivGrotesk'), url(../../public/assets/fonts/aktivGrotesk/AktivGrotesk-Regular.otf) format('opentype');
+  font-family: "AktivGroteskRegular";
+  src: local("AktivGrotesk"),
+    url(../../public/assets/fonts/aktivGrotesk/AktivGrotesk-Regular.otf)
+      format("opentype");
   font-weight: 400;
   font-style: normal;
 }
