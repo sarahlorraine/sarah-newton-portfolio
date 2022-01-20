@@ -1,8 +1,6 @@
 import * as React from "react";
 import Box from "../../components/Box/Box";
 import FlexBox from "../../components/FlexBox/FlexBox";
-import BoxContent from "../../components/BoxContent/BoxContent";
-const profilePicture = "../../public/assets/images/sarah.png"
 
 import '../../globals/fonts.scss';
 import './home.scss';
@@ -10,8 +8,6 @@ import './home.scss';
 export interface HomeSceneProps { }
 
 export const HomeScene = (props: HomeSceneProps) => {
-  
-  const [state, setState] = React.useState<string>("");
 
 return (
       <Box>
@@ -31,7 +27,7 @@ return (
           <span>User Interface Designer &#8594; Flight Center, Brisbane, 2013 - 2014</span>
           </p>
           </div>
-          <div className="profile"><img src={profilePicture} /></div>
+          <div className="profile"></div>
         </FlexBox>           
       </Box>
   );

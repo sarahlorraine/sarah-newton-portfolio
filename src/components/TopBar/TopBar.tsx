@@ -11,9 +11,6 @@ const TopBar = () => {
 
   const [mobileNavActive, setMobileNavActive] = React.useState<boolean>(false);
 
-  const downloadCV = () => {
-    alert("Download")
-  }
   return (
     <div className={mergeClassNames([mobileNavActive && "topBarWrapperActive", "topBarWrapper"])}>
      <Link to="/" className={"logo"}>arah Newton</Link>

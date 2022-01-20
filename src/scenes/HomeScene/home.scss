@@ -9,18 +9,19 @@
 }
 
 .profile {
+  width: 100%;
   margin-top: 40px;
+  background-image: url("../../../public/assets/images/sarah.png");
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   @media screen and (min-width: 768px) {
+    width: 40%;
     max-width: 40%;
     margin-left: auto;
     padding-left: 26px;
     margin-top: 26px;
-  }
-
-  img {
-    max-width: fit-content;
-    max-width: -webkit-fill-available;
   }
 }
 
