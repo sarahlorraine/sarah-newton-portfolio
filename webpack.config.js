@@ -1,104 +1,102 @@
-const path = require('path'),
-  webpack = require('webpack'),
-HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path"),
+  webpack = require("webpack"),
+  HtmlWebpackPlugin = require("html-webpack-plugin");
 const CSSModuleLoader = {
-  loader: 'css-loader',
+  loader: "css-loader",
   options: {
     importLoaders: 1,
     modules: true,
     sourceMap: true,
-  }
-}
+  },
+};
 module.exports = {
   entry: {
-    app: './src/index.tsx',
-    vendor: ['react', 'react-dom', 'react-router']
+    app: "./src/index.tsx",
+    vendor: ["react", "react-dom", "react-router"],
   },
   devServer: {
     historyApiFallback: true,
   },
   output: {
-      path: path.resolve(__dirname, 'build'),
-      filename: 'js/[name].bundle.js'
+    path: path.resolve(__dirname, "build"),
+    filename: "js/[name].bundle.js",
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   resolve: {
-      extensions: ['.js', '.jsx', '.json', '.ts', '.tsx', '.scss']
+    extensions: [".js", ".jsx", ".json", ".ts", ".tsx", ".scss"],
   },
   module: {
-      rules: [
+    rules: [
+      {
+        test: /\.s(a|c)ss$/,
+        exclude: /\.module.(s(a|c)ss)$/,
+        loader: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
           {
-            test: /\.s(a|c)ss$/,
-            exclude: /\.module.(s(a|c)ss)$/,
-            loader: [
-              'style-loader',
-              'css-loader',
-              'sass-loader',
-            ]
-          },
-          {
-              test: /\.css$/,
-              use: [
-                'style-loader',
-                {
-                  loader: 'css-loader',
-                  options: {
-                    importLoaders: 1,
-                    modules: true
-                  }
-                },
-                {
-                  loader: 'postcss-loader'
-                }
-              ],
-              include: /\.module\.css$/
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true,
             },
-            {
-              test: /\.css$/,
-              use: [
-                'style-loader',
-                'css-loader',
-                {
-                  loader: 'postcss-loader',
-                }
-              ],
-              exclude: /\.module\.css$/
+          },
+          {
+            loader: "postcss-loader",
+          },
+        ],
+        include: /\.module\.css$/,
+      },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+          },
+        ],
+        exclude: /\.module\.css$/,
+      },
+      { test: /\.tsx?$/, loader: "babel-loader" },
+      { test: /\.tsx?$/, loader: "ts-loader" },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "react-svg-loader",
+          },
+          {
+            loader: "babel-loader",
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: "file-loader",
+      },
+      {
+        test: /\.(png|pdf|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "static/media/[name]-[hash:8].[ext]",
             },
-          { test: /\.tsx?$/, loader: "babel-loader" },
-          { test: /\.tsx?$/, loader: "ts-loader" },
-          {
-            test: /\.svg$/,
-            use: [
-              {
-                loader: "react-svg-loader"
-              },
-              {
-                loader: "babel-loader"
-              }
-            ]
           },
-          {
-            test: /\.(woff|woff2|eot|ttf|otf)$/,
-            use: "file-loader"
-          },
-          {
-            test: /\.(png|jpe?g|gif)$/i,
-            use: [
-                {
-                    loader: "file-loader",
-                    options: {
-                        name: "static/media/[name]-[hash:8].[ext]",
-                    },
-                },
-            ],
-          },
-          { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-      ]
+        ],
+      },
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+    ],
   },
   plugins: [
-      new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html') }),
-      new webpack.HotModuleReplacementPlugin(),
-      require('precss'),
-      require('autoprefixer')
-  ]
-}
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "index.html"),
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+    require("precss"),
+    require("autoprefixer"),
+  ],
+};

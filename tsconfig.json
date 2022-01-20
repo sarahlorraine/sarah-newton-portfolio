@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "typeRoots": ["node_modules/@types", "src/globals/types"],
     "jsx": "react",
     "module": "commonjs",
     "noImplicitAny": true,
@@ -9,7 +10,5 @@
     "sourceMap": true,
     "target": "es5"
   },
-  "include": [
-    "./src/**/**/*", "postcss.config.js"
-  ]
+  "include": ["./src/**/**/*", "postcss.config.js", "src/globals/types"]
 }

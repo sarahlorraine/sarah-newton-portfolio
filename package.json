@@ -1,6 +1,7 @@
 {
   "name": "sarah-newton-portfolio",
   "version": "1.0.0",
+  "typings": "declarations.d.ts",
   "description": "",
   "main": "index.js",
   "scripts": {
