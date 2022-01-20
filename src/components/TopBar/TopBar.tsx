@@ -10,6 +10,11 @@ import cv from "../../../public/assets/files/cv-sarah-newton.pdf";
 const TopBar = () => {
   const [mobileNavActive, setMobileNavActive] = React.useState<boolean>(false);
 
+  const onBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    if (mobileNavActive) setTimeout(() => setMobileNavActive(false), 100);
+  };
+
   return (
     <div
       className={mergeClassNames([
@@ -21,7 +26,7 @@ const TopBar = () => {
         <Link to="/" className={"logo"}>
           arah Newton
         </Link>
-        <div className="navigationMobile">
+        <div onBlur={onBlur} className="navigationMobile">
           <button
             className={mergeClassNames([
               mobileNavActive && "burgerBtnActive",
