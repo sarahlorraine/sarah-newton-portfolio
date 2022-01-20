@@ -10,18 +10,21 @@
 
 .profile {
   width: 100%;
+  min-height: 400px;
   margin-top: 40px;
   background-image: url("../../../public/assets/images/sarah.png");
   background-position: 0 0;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 
   @media screen and (min-width: 768px) {
     width: 40%;
     max-width: 40%;
+    min-height: auto;
     margin-left: auto;
     padding-left: 26px;
     margin-top: 26px;
+    background-size: contain;
   }
 }
 

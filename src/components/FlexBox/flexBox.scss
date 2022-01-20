@@ -1,5 +1,7 @@
 .flexBox {
     @media screen and (min-width: 768px) {
         display: flex;
+        margin: 0 auto;
+        max-width: 1400px;
     }
 }
