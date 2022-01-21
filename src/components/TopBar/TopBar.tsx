@@ -11,7 +11,6 @@ const TopBar = () => {
   const [mobileNavActive, setMobileNavActive] = React.useState<boolean>(false);
 
   const onBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    e.preventDefault();
     e.target.focus();
     if (mobileNavActive) setTimeout(() => setMobileNavActive(false), 100);
   };
