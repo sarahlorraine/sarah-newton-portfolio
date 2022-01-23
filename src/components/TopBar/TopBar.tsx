@@ -14,7 +14,7 @@ const TopBar = () => {
     e.target.focus();
     if (mobileNavActive) setTimeout(() => setMobileNavActive(false), 100);
   };
-  const onTouchEnd = (e: React.TouchEvent<HTMLButtonElement>) => {
+  const onTouchEnd = (e: React.TouchEvent<HTMLAnchorElement>) => {
     if (mobileNavActive) setTimeout(() => setMobileNavActive(false), 100);
   };
 
@@ -31,7 +31,6 @@ const TopBar = () => {
         </Link>
         <div className="navigationMobile">
           <button
-            onTouchEnd={(e) => onTouchEnd(e)}
             onBlur={onBlur}
             className={mergeClassNames([
               mobileNavActive && "burgerBtnActive",
@@ -51,14 +50,21 @@ const TopBar = () => {
             "navigation",
           ])}
         >
-          <Link to="/design-portfolio">Design Portfolio</Link>
+          <Link onTouchEnd={(e) => onTouchEnd(e)} to="/design-portfolio">
+            Design Portfolio
+          </Link>
           <a
+            onTouchEnd={(e) => onTouchEnd(e)}
             target="_blank"
             href="https://www.linkedin.com/in/sarah-newton-66077553/"
           >
             LinkedIn
           </a>
-          <a target="_blank" href="https://github.com/sarahlorraine">
+          <a
+            onTouchEnd={(e) => onTouchEnd(e)}
+            target="_blank"
+            href="https://github.com/sarahlorraine"
+          >
             GitHub
           </a>
           <Button type="download" className="cvBtn" href={cv}>
