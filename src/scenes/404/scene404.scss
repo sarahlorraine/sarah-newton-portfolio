@@ -1,0 +1,26 @@
+@import "../../globals/base_variables.scss";
+
+.wrapper404 {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.image404 {
+  width: 100%;
+  min-width: 200px;
+  min-height: 200px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  background-image: url("../../../public/assets/images/john-travolta-404.gif");
+  background-size: contain;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-color: $background;
+}
+
+.btn404 {
+  margin: 0 auto;
+  color: $font;
+}
