@@ -10,8 +10,11 @@ import cv from "../../../public/assets/files/cv-sarah-newton.pdf";
 const TopBar = () => {
   const [mobileNavActive, setMobileNavActive] = React.useState<boolean>(false);
 
-  const onBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+  const onBlur = (e: React.FocusEvent<HTMLButtonElement>) => {
     e.target.focus();
+    if (mobileNavActive) setTimeout(() => setMobileNavActive(false), 100);
+  };
+  const onTouchEnd = (e: React.TouchEvent<HTMLButtonElement>) => {
     if (mobileNavActive) setTimeout(() => setMobileNavActive(false), 100);
   };
 
@@ -28,6 +31,7 @@ const TopBar = () => {
         </Link>
         <div className="navigationMobile">
           <button
+            onTouchEnd={(e) => onTouchEnd(e)}
             onBlur={onBlur}
             className={mergeClassNames([
               mobileNavActive && "burgerBtnActive",
