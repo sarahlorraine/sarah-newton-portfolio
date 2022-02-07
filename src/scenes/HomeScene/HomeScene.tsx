@@ -14,10 +14,13 @@ export const HomeScene: React.FC<RouteComponentProps> = () => {
           <p>
             Sarah is a web developer and ex-designer based in Gothenburg,
             Sweden. She is currently working as a{" "}
-            <strong>Full-Stack Developer</strong> at Bokio.
-            <br />
-            Originally from Brisbane, Australia.
+            <strong>Full-Stack Developer</strong> at{" "}
+            <a href="http://bokio.se" target="_blank">
+              Bokio
+            </a>
+            .
           </p>
+          <p>Originally from Brisbane, Australia.</p>
           <a href="mailto:s.newton2990@gmail.com">Get in touch</a>
           <section className="experience">
             <h3>Work experience</h3>
