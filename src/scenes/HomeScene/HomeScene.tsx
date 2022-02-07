@@ -14,7 +14,7 @@ export const HomeScene: React.FC<RouteComponentProps> = () => {
           <p>
             Sarah is a web developer and ex-designer based in Gothenburg,
             Sweden. She is currently working as a{" "}
-            <strong>Senior Full-Stack Developer</strong> at Bokio.
+            <strong>Full-Stack Developer</strong> at Bokio.
             <br />
             Originally from Brisbane, Australia.
           </p>
@@ -22,16 +22,16 @@ export const HomeScene: React.FC<RouteComponentProps> = () => {
           <section className="experience">
             <h3>Work experience</h3>
             <span>
-              Senior Full-Stack Developer &#8594; Bokio, Gothenburg, 2017 -
-              Present
+              <strong> Full-Stack Developer</strong> &#8594; Bokio, Gothenburg,
+              2017 - Present
             </span>
             <span>
-              Lead UI/UX Designer &amp; FE Developer &#8594; Venue10, London,
-              2014 - 2015
+              <strong>Lead UI/UX Designer &amp; FE Developer</strong> &#8594;
+              Venue10, London, 2014 - 2015
             </span>
             <span>
-              User Interface Designer &#8594; Flight Center, Brisbane, 2013 -
-              2014
+              <strong> User Interface Designer</strong> &#8594; Flight Center,
+              Brisbane, 2013 - 2014
             </span>
           </section>
         </div>
